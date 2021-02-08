@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/todoFragment">
+
+    <fragment
+        android:id="@+id/todoFragment"
+        android:name="com.example.toddomvvm.ui.todo.TodoFragment"
+        android:label="Todo "
+        tools:layout="@layout/fragment_task">
+        <action
+            android:id="@+id/action_todoFragment_to_addEditTodoFragment"
+            app:destination="@id/addEditTodoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditTodoFragment"
+        android:name="com.example.toddomvvm.ui.add_edit_todo.AddEditTodoFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_add_edit_task">
+        <argument
+            android:name="todo"
+            android:defaultValue="@null"
+            app:argType="com.example.toddomvvm.data.Todo"
+            app:nullable="true" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+    <dialog
+        android:id="@+id/deleteAllCompletedDialogFragment"
+        android:name="com.example.toddomvvm.ui.delte_all_completed.DeleteAllCompletedDialogFragment"
+        android:label="DeleteAllCompletedDialogFragment" /><action android:id="@+id/action_global_deleteAllCompletedDialogFragment" app:destination="@id/deleteAllCompletedDialogFragment"/>
+</navigation>
