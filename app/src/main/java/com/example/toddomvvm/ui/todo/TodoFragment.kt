@@ -169,6 +169,9 @@ class TodoFragment : Fragment(R.layout.fragment_task), TodoAdapter.OnItemClickLi
 
     override fun onDestroy() {
         super.onDestroy()
-        searchView .setOnQueryTextListener(null)
+        searchView.setOnQueryTextListener(null)
+
     }
+
+
 }

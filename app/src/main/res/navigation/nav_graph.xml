@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/todoFragment"
         android:name="com.example.toddomvvm.ui.todo.TodoFragment"
-        android:label="Todo "
+        android:label="Todo"
         tools:layout="@layout/fragment_task">
         <action
             android:id="@+id/action_todoFragment_to_addEditTodoFragment"
